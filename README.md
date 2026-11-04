@@ -33,21 +33,6 @@ O site possui um design moderno, atrativo e responsivo, valorizando a identidade
 
 O projeto busca transmitir uma identidade visual delicada e sofisticada, utilizando elementos gráficos relacionados ao universo da confeitaria, imagens atrativas e uma organização visual que valoriza os produtos.
 
-## 📂 Estrutura do projeto
-
-```text
-confeitaria/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── img/
-│   └── imagens-dos-produtos/
-│
-└── README.md
-```
 
 ## 🚀 Como executar o projeto
 
@@ -58,8 +43,7 @@ confeitaria/
 
 ## 👨‍💻 Desenvolvedores
 
-Projeto desenvolvido como parte de uma atividade de desenvolvimento web, com o objetivo de aplicar conhecimentos em HTML, CSS e JavaScript.
-
+Projeto desenvolvido como parte de uma atividade de desenvolvimento web, com o objetivo de aplicar conhecimentos em HTML, CSS.
 ---
 
 **🍰 Confeitaria — Transformando momentos em doces experiências!**
