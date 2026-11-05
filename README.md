@@ -18,7 +18,6 @@ O site possui um design moderno, atrativo e responsivo, valorizando a identidade
 
 - **HTML5:** estruturação das páginas.
 - **CSS3:** estilização e identidade visual.
-- **JavaScript:** interatividade e funcionalidades do site.
 
 ## ✨ Funcionalidades
 
@@ -40,6 +39,7 @@ O projeto busca transmitir uma identidade visual delicada e sofisticada, utiliza
 2. Abra a pasta do projeto no Visual Studio Code.
 3. Execute o arquivo `index.html` no navegador.
 4. Navegue pelo site e conheça as funcionalidades.
+5. *ou acesse o link: [link]
 
 ## 👨‍💻 Desenvolvedores
 
