@@ -1,15 +1,23 @@
-# Mesmo Dockerfile do projeto lojaFS: serve o HTML hoje e o PHP + SQLite depois.
 FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y libsqlite3-dev \
-    && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install pdo pdo_sqlite
+    && docker-php-ext-install pdo pdo_sqlite \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY . /var/www/html/
+# Copia os arquivos do site para a pasta principal do Apache
+COPY ["loja da dani/loja da dani/", "/var/www/html/"]
 
-# Página 404 própria e bloqueio do acesso direto à pasta do banco
-RUN echo 'ErrorDocument 404 /404.html' > /etc/apache2/conf-enabled/forninho.conf \
-    && echo '<Directory /var/www/html/banco>\n  Require all denied\n</Directory>' >> /etc/apache2/conf-enabled/forninho.conf \
-    && chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+# Define o arquivo inicial e protege a pasta do banco
+RUN echo 'DirectoryIndex forninhodalili.html index.html' \
+    > /etc/apache2/conf-available/forninho.conf \
+    && echo '<Directory /var/www/html/banco>' \
+    >> /etc/apache2/conf-available/forninho.conf \
+    && echo 'Require all denied' \
+    >> /etc/apache2/conf-available/forninho.conf \
+    && echo '</Directory>' \
+    >> /etc/apache2/conf-available/forninho.conf \
+    && a2enconf forninho \
+    && chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
 
 EXPOSE 80
